@@ -1,0 +1,287 @@
+Delivered-To: leon.stolze@gmail.com
+Received: by 2002:ac9:1a41:0:0:0:0:0 with SMTP id k1csp681156ocf;
+        Wed, 6 Jan 2021 01:05:02 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJypDWisiJdNyQOI6h4L9zLpQPjMqmKWx8zWTew4hC+pGgmvgvWGpXaixdxBEqRWi7uNuk/T
+X-Received: by 2002:adf:decb:: with SMTP id i11mr3384198wrn.26.1609923902694;
+        Wed, 06 Jan 2021 01:05:02 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1609923902; cv=none;
+        d=google.com; s=arc-20160816;
+        b=1JrCp0KWksHAVSJztKYBJDEXHwVrel9Xqm2QiPf5iDeHJuQDGLzticN1T0Bz/QvE14
+         Q0EuQkTMsNeqE+Kw63JEtt2CufkHo2OXHdgOjRvaUELxSN+ZYva/gJEqfXRIXjD0uzWm
+         YPz7ZDdRf6T8YPvg6axR/tPruSY/rclZ5XaAjjlR73jSv1qn7TBgJHzTaxmgo5+R6jT6
+         mWk6goLvYDyeSSzcVkvYhLyzMNRZ8xG/lTfsWltjGMlei1r3qxe9wRs9mr4/hXfJSIOX
+         a4oSZPVCU5pPw66cf4MF6nwyzLRngygv4wAqSlaUAV20kRt8GZEroM8Nd9gl6NDQbJIi
+         7fNQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:references:in-reply-to:importance:date:subject:from:to
+         :mime-version;
+        bh=kMLKak2ZdtWGAzy5w4tu20bDm5eHJylu/vQsg2iS4yA=;
+        b=uK9QhG3BaU4LqpIEYP5/3WctSyftBAdA89Saa5s6g7Q4K2g9L3BUqwTFgLrKuYPTQq
+         0i4k5JljNHzfECquLouXTDN3hOfXCzS+N3TUkzw/usp4I4DKHAF6L0pUXDlfntneKC1a
+         JonykkO1yUsbn4BRXG0qcjM4mVcfPheSo9qBdyglKbn2oZrnnVXXVZJLcKD5yg4q2tiq
+         4EGHwSx9+OnOMM0IeuReS5wceKVofGNrnDj1/phAOpYRnwxPrP+H4Fp/tkoGUC9MqMjL
+         Jz/3iAtzVcnlpGoXaLrgRp5H7qsUX66nw0eJArGrjYvcRAqKV1KXQUmt6l+efAMVtE+n
+         GyVA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: best guess record for domain of lothar-stolze@t-online.de designates 194.25.134.81 as permitted sender) smtp.mailfrom=lothar-stolze@t-online.de
+Return-Path: <lothar-stolze@t-online.de>
+Received: from mailout03.t-online.de (mailout03.t-online.de. [194.25.134.81])
+        by mx.google.com with ESMTPS id u74si1471697wmu.56.2021.01.06.01.05.02
+        for <leon.stolze@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 06 Jan 2021 01:05:02 -0800 (PST)
+Received-SPF: pass (google.com: best guess record for domain of lothar-stolze@t-online.de designates 194.25.134.81 as permitted sender) client-ip=194.25.134.81;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of lothar-stolze@t-online.de designates 194.25.134.81 as permitted sender) smtp.mailfrom=lothar-stolze@t-online.de
+Received: from fwd30.aul.t-online.de (fwd30.aul.t-online.de [172.20.26.135])
+	by mailout03.t-online.de (Postfix) with SMTP id 307EB426986F
+	for <leon.stolze@gmail.com>; Wed,  6 Jan 2021 10:05:02 +0100 (CET)
+Received: from [IPv6:::ffff:192.168.178.29] (SmlwHcZTrhXzhWn2vtFgcgNtnbKpeWFsfATdcvsJMXHGUt5ZNk+tED6UtauI2CXQBw@[82.207.236.147]) by fwd30.t-online.de
+	with (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384 encrypted)
+	esmtp id 1kx4kS-12GDcO0; Wed, 6 Jan 2021 10:04:56 +0100
+MIME-Version: 1.0
+To: "leon.stolze@gmail.com" <leon.stolze@gmail.com>
+From: Lothar Stolze <lothar-stolze@t-online.de>
+Subject: WG: von Siegmar
+Date: Wed, 6 Jan 2021 10:04:55 +0100
+Importance: normal
+X-Priority: 3
+In-Reply-To: <002a01d6e401$25689740$7039c5c0$@digitalav.de>
+References: <002a01d6e401$25689740$7039c5c0$@digitalav.de>
+Content-Type: multipart/alternative;
+	boundary="_2760A7A2-FE2E-4D57-A91C-906500DB4E11_"
+Message-ID: <1kx4kS-12GDcO0@fwd30.t-online.de>
+X-ID: SmlwHcZTrhXzhWn2vtFgcgNtnbKpeWFsfATdcvsJMXHGUt5ZNk+tED6UtauI2CXQBw
+X-TOI-EXPURGATEID: 150726::1609923897-00014A27-F4F62CEB/0/0 CLEAN NORMAL
+X-TOI-MSGID: c7c6e2ac-392e-444c-a1d1-2f967c4c636d
+
+--_2760A7A2-FE2E-4D57-A91C-906500DB4E11_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Hi Leon, bestimmt fehlgeleitet an mich!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+LG Papa
+
+Von: info@digitalav.de
+Gesendet: Mittwoch, 6. Januar 2021 08:54
+An: 'Lothar Stolze'
+Betreff: von Siegmar
+
+Hi Leon,
+
+Happy New Year von uns beiden! Hoffe du hattest sch=C3=B6ne Weihnachtsfeier=
+tage und bist gut ins neue Jahr gekommen.
+
+Wollte mal h=C3=B6ren, ob du die HTML Seiten f=C3=BCr die =C3=9Cbersicht de=
+r Raumbelegung hinbekommen hast.
+
+Hier die Raumnummern von den R=C3=A4umen.=20
+
+Citadel
+ID=0DRaumname=0DGer=C3=A4t=0D=0D1=0DAtlanta=0DDisplay Blufin 10"=0D=0D2=0DT=
+okio =0DDisplay Blufin 10"=0D=0D3=0DSeoul=C2=A0 (L1)=0DDisplay Blufin 10"=
+=0D=0D4=0DMontreal (L2)=0DDisplay Blufin 10"=0D=0D5=0DL1 + L2=0Dbeide R=C3=
+=A4ume=C2=A0 Display Blufin 10"=0D=0D14=0DRio=0DDisplay Blufin 10"=0D=0D11=
+=0DAthen=0DDisplay Blufin 10"=0D=0D6=0DBarcelona=0Dkein Display=0D=0D
+Was etwas Tricky wird ist die ID5, auf der gro=C3=9Fen Info kein Problem ab=
+er beim T=C3=BCrdisplay schon. Da m=C3=BCsste dann das T=C3=BCrdisplay die =
+M=C3=B6glichkeit haben die ID3 oder ID5 anzuzeigen respektive ID4 oder ID5.=
+ Einbau einer IF Schleife ?
+
+Wir k=C3=B6nnen ja mal telefonieren.
+
+LG
+
+Siegmar
+
+
+
+--_2760A7A2-FE2E-4D57-A91C-906500DB4E11_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/of=
+fice/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html40"><head><meta ht=
+tp-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8"><meta name=
+=3DGenerator content=3D"Microsoft Word 15 (filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style></head><body lang=3DDE link=3Dblue vlink=3D"#954F72" style=3D'wo=
+rd-wrap:break-word'><div class=3DWordSection1><p class=3DMsoNormal>Hi Leon,=
+ bestimmt fehlgeleitet an mich!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p><p class=3DMs=
+oNormal>LG Papa</p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><div style=3D'=
+mso-element:para-border-div;border:none;border-top:solid #E1E1E1 1.0pt;padd=
+ing:3.0pt 0cm 0cm 0cm'><p class=3DMsoNormal style=3D'border:none;padding:0c=
+m'><b>Von: </b><a href=3D"mailto:info@digitalav.de">info@digitalav.de</a><b=
+r><b>Gesendet: </b>Mittwoch, 6. Januar 2021 08:54<br><b>An: </b><a href=3D"=
+mailto:lothar-stolze@t-online.de">'Lothar Stolze'</a><br><b>Betreff: </b>vo=
+n Siegmar</p></div><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMso=
+Normal><span style=3D'mso-fareast-language:EN-US'>Hi Leon,<o:p></o:p></span=
+></p><p class=3DMsoNormal><span style=3D'mso-fareast-language:EN-US'><o:p>&=
+nbsp;</o:p></span></p><p class=3DMsoNormal><span style=3D'mso-fareast-langu=
+age:EN-US'>Happy New Year von uns beiden! Hoffe du hattest sch=C3=B6ne Weih=
+nachtsfeiertage und bist gut ins neue Jahr gekommen.<o:p></o:p></span></p><=
+p class=3DMsoNormal><span style=3D'mso-fareast-language:EN-US'><o:p>&nbsp;<=
+/o:p></span></p><p class=3DMsoNormal><span style=3D'mso-fareast-language:EN=
+-US'>Wollte mal h=C3=B6ren, ob du die HTML Seiten f=C3=BCr die =C3=9Cbersic=
+ht der Raumbelegung hinbekommen hast.<o:p></o:p></span></p><p class=3DMsoNo=
+rmal><span style=3D'mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p=
+><p class=3DMsoNormal><span style=3D'mso-fareast-language:EN-US'>Hier die R=
+aumnummern von den R=C3=A4umen. <o:p></o:p></span></p><p class=3DMsoNormal>=
+<span style=3D'mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p><tab=
+le class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D0 width=
+=3D378 style=3D'width:283.65pt;border-collapse:collapse'><tr style=3D'heigh=
+t:30.0pt'><td width=3D44 valign=3Dbottom style=3D'width:32.65pt;padding:0cm=
+ 3.5pt 0cm 3.5pt;height:30.0pt'><p class=3DMsoNormal align=3Dcenter style=
+=3D'text-align:center'><span style=3D'color:black'>Citadel<br>ID<o:p></o:p>=
+</span></p></td><td width=3D80 nowrap valign=3Dbottom style=3D'width:60.0pt=
+;border:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:30.0pt'><=
+p class=3DMsoNormal><span style=3D'font-size:10.0pt;color:black'>Raumname<o=
+:p></o:p></span></p></td><td width=3D175 nowrap valign=3Dbottom style=3D'wi=
+dth:131.0pt;border:solid windowtext 1.0pt;border-left:none;padding:0cm 3.5p=
+t 0cm 3.5pt;height:30.0pt'><p class=3DMsoNormal><span style=3D'font-size:10=
+.0pt;color:black'>Ger=C3=A4t<o:p></o:p></span></p></td><td width=3D80 nowra=
+p valign=3Dbottom style=3D'width:60.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:=
+30.0pt'></td></tr><tr style=3D'height:15.0pt'><td width=3D44 nowrap valign=
+=3Dbottom style=3D'width:32.65pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'=
+><p class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><span styl=
+e=3D'color:black'>1<o:p></o:p></span></p></td><td width=3D80 nowrap valign=
+=3Dbottom style=3D'width:60.0pt;border:solid windowtext 1.0pt;border-top:no=
+ne;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal><span st=
+yle=3D'font-size:10.0pt;color:black'>Atlanta<o:p></o:p></span></p></td><td =
+width=3D175 nowrap valign=3Dbottom style=3D'width:131.0pt;border-top:none;b=
+order-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid win=
+dowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNorm=
+al><span style=3D'font-size:10.0pt;color:black'>Display Blufin 10&quot;<o:p=
+></o:p></span></p></td><td width=3D80 nowrap valign=3Dbottom style=3D'width=
+:60.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'></td></tr><tr style=3D'h=
+eight:15.0pt'><td width=3D44 nowrap valign=3Dbottom style=3D'width:32.65pt;=
+padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal align=3Dcen=
+ter style=3D'text-align:center'><span style=3D'color:black'>2<o:p></o:p></s=
+pan></p></td><td width=3D80 nowrap valign=3Dbottom style=3D'width:60.0pt;bo=
+rder:solid windowtext 1.0pt;border-top:none;padding:0cm 3.5pt 0cm 3.5pt;hei=
+ght:15.0pt'><p class=3DMsoNormal><span style=3D'font-size:10.0pt;color:blac=
+k'>Tokio <o:p></o:p></span></p></td><td width=3D175 nowrap valign=3Dbottom =
+style=3D'width:131.0pt;border-top:none;border-left:none;border-bottom:solid=
+ windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm=
+ 3.5pt;height:15.0pt'><p class=3DMsoNormal><span style=3D'font-size:10.0pt;=
+color:black'>Display Blufin 10&quot;<o:p></o:p></span></p></td><td width=3D=
+80 nowrap valign=3Dbottom style=3D'width:60.0pt;padding:0cm 3.5pt 0cm 3.5pt=
+;height:15.0pt'></td></tr><tr style=3D'height:15.0pt'><td width=3D44 nowrap=
+ valign=3Dbottom style=3D'width:32.65pt;padding:0cm 3.5pt 0cm 3.5pt;height:=
+15.0pt'><p class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><sp=
+an style=3D'color:black'>3<o:p></o:p></span></p></td><td width=3D80 nowrap =
+valign=3Dbottom style=3D'width:60.0pt;border:solid windowtext 1.0pt;border-=
+top:none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal><s=
+pan style=3D'font-size:10.0pt;color:black'>Seoul&nbsp; (L1)<o:p></o:p></spa=
+n></p></td><td width=3D175 nowrap valign=3Dbottom style=3D'width:131.0pt;bo=
+rder-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-=
+right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p =
+class=3DMsoNormal><span style=3D'font-size:10.0pt;color:black'>Display Bluf=
+in 10&quot;<o:p></o:p></span></p></td><td width=3D80 nowrap valign=3Dbottom=
+ style=3D'width:60.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'></td></tr=
+><tr style=3D'height:15.0pt'><td width=3D44 nowrap valign=3Dbottom style=3D=
+'width:32.65pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNor=
+mal align=3Dcenter style=3D'text-align:center'><span style=3D'color:black'>=
+4<o:p></o:p></span></p></td><td width=3D80 nowrap valign=3Dbottom style=3D'=
+width:60.0pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 3.5p=
+t 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal><span style=3D'font-size:10=
+.0pt;color:black'>Montreal (L2)<o:p></o:p></span></p></td><td width=3D175 n=
+owrap valign=3Dbottom style=3D'width:131.0pt;border-top:none;border-left:no=
+ne;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt=
+;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal><span styl=
+e=3D'font-size:10.0pt;color:black'>Display Blufin 10&quot;<o:p></o:p></span=
+></p></td><td width=3D80 nowrap valign=3Dbottom style=3D'width:60.0pt;paddi=
+ng:0cm 3.5pt 0cm 3.5pt;height:15.0pt'></td></tr><tr style=3D'height:15.0pt'=
+><td width=3D44 nowrap valign=3Dbottom style=3D'width:32.65pt;padding:0cm 3=
+.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal align=3Dcenter style=3D'=
+text-align:center'><span style=3D'color:black'>5<o:p></o:p></span></p></td>=
+<td width=3D80 nowrap valign=3Dbottom style=3D'width:60.0pt;border:solid wi=
+ndowtext 1.0pt;border-top:none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><=
+p class=3DMsoNormal><span style=3D'font-size:10.0pt;color:black'>L1 + L2<o:=
+p></o:p></span></p></td><td width=3D175 nowrap valign=3Dbottom style=3D'wid=
+th:131.0pt;border-top:none;border-left:none;border-bottom:solid windowtext =
+1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;heigh=
+t:15.0pt'><p class=3DMsoNormal><span style=3D'font-size:10.0pt;color:black'=
+>beide R=C3=A4ume&nbsp; Display Blufin 10&quot;<o:p></o:p></span></p></td><=
+td width=3D80 nowrap valign=3Dbottom style=3D'width:60.0pt;padding:0cm 3.5p=
+t 0cm 3.5pt;height:15.0pt'></td></tr><tr style=3D'height:15.0pt'><td width=
+=3D44 nowrap valign=3Dbottom style=3D'width:32.65pt;padding:0cm 3.5pt 0cm 3=
+.5pt;height:15.0pt'><p class=3DMsoNormal align=3Dcenter style=3D'text-align=
+:center'><span style=3D'color:black'>14<o:p></o:p></span></p></td><td width=
+=3D80 nowrap valign=3Dbottom style=3D'width:60.0pt;border:solid windowtext =
+1.0pt;border-top:none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=
+=3DMsoNormal><span style=3D'font-size:10.0pt;color:black'>Rio<o:p></o:p></s=
+pan></p></td><td width=3D175 nowrap valign=3Dbottom style=3D'width:131.0pt;=
+border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;borde=
+r-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><=
+p class=3DMsoNormal><span style=3D'font-size:10.0pt;color:black'>Display Bl=
+ufin 10&quot;<o:p></o:p></span></p></td><td width=3D80 nowrap valign=3Dbott=
+om style=3D'width:60.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'></td></=
+tr><tr style=3D'height:15.0pt'><td width=3D44 nowrap valign=3Dbottom style=
+=3D'width:32.65pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMso=
+Normal align=3Dcenter style=3D'text-align:center'><span style=3D'color:blac=
+k'>11<o:p></o:p></span></p></td><td width=3D80 nowrap valign=3Dbottom style=
+=3D'width:60.0pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm =
+3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal><span style=3D'font-siz=
+e:10.0pt;color:black'>Athen<o:p></o:p></span></p></td><td width=3D175 nowra=
+p valign=3Dbottom style=3D'width:131.0pt;border-top:none;border-left:none;b=
+order-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;pad=
+ding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal><span style=3D=
+'font-size:10.0pt;color:black'>Display Blufin 10&quot;<o:p></o:p></span></p=
+></td><td width=3D80 nowrap valign=3Dbottom style=3D'width:60.0pt;padding:0=
+cm 3.5pt 0cm 3.5pt;height:15.0pt'></td></tr><tr style=3D'height:15.0pt'><td=
+ width=3D44 nowrap valign=3Dbottom style=3D'width:32.65pt;padding:0cm 3.5pt=
+ 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal align=3Dcenter style=3D'text=
+-align:center'><span style=3D'color:black'>6<o:p></o:p></span></p></td><td =
+width=3D80 nowrap valign=3Dbottom style=3D'width:60.0pt;border-top:none;bor=
+der-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windo=
+wtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'><p class=3DMsoNormal=
+><span style=3D'font-size:10.0pt;color:black'>Barcelona<o:p></o:p></span></=
+p></td><td width=3D175 nowrap valign=3Dbottom style=3D'width:131.0pt;border=
+:none;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;heigh=
+t:15.0pt'><p class=3DMsoNormal><span style=3D'font-size:10.0pt;color:black'=
+>kein Display<o:p></o:p></span></p></td><td width=3D80 nowrap valign=3Dbott=
+om style=3D'width:60.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'></td></=
+tr></table><p class=3DMsoNormal><span style=3D'mso-fareast-language:EN-US'>=
+<o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span style=3D'mso-fareast=
+-language:EN-US'>Was etwas Tricky wird ist die ID5, auf der gro=C3=9Fen Inf=
+o kein Problem aber beim T=C3=BCrdisplay schon. Da m=C3=BCsste dann das T=
+=C3=BCrdisplay die M=C3=B6glichkeit haben die ID3 oder ID5 anzuzeigen respe=
+ktive ID4 oder ID5. Einbau einer IF Schleife ?<o:p></o:p></span></p><p clas=
+s=3DMsoNormal><span style=3D'mso-fareast-language:EN-US'><o:p>&nbsp;</o:p><=
+/span></p><p class=3DMsoNormal><span style=3D'mso-fareast-language:EN-US'>W=
+ir k=C3=B6nnen ja mal telefonieren.<o:p></o:p></span></p><p class=3DMsoNorm=
+al><span style=3D'mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p><=
+p class=3DMsoNormal><span style=3D'mso-fareast-language:EN-US'>LG<o:p></o:p=
+></span></p><p class=3DMsoNormal><span style=3D'mso-fareast-language:EN-US'=
+><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span style=3D'mso-fareas=
+t-language:EN-US'>Siegmar<o:p></o:p></span></p><p class=3DMsoNormal><span s=
+tyle=3D'mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p><p class=3D=
+MsoNormal><span style=3D'mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></spa=
+n></p></div></body></html>=
+
+--_2760A7A2-FE2E-4D57-A91C-906500DB4E11_--
+
