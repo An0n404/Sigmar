@@ -25,8 +25,6 @@ var getRoom = function (url) {
 
 function dataParsed(results) {
 	lastCsvData = results.data;
-
-	//lastCsvData=fillEmpty(lastCsvData);
 	console.log(lastCsvData);
 	var d = new Date();
 	var roomData=[];
@@ -89,8 +87,6 @@ function displayText(data, date) {
 	setClock(date);
 }
 
-
-
 /*url oder Pfad zur .csv-Datei im Format:
  Raumbezeichnung,Uhrzeit Beginn,Uhrzeit Ende,Gruppe,Titel,Infotext
 */
@@ -104,6 +100,7 @@ Papa.parse(csvLocation, {
       		header: true,
       		dynamicTyping: true,
       		skipEmptyLines: 'greedy',
+        	encoding: 'windows-1252',
       		complete: function(results){
       			dataParsed(results);
       		}

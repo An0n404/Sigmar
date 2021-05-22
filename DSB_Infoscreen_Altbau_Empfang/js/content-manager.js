@@ -38,8 +38,27 @@ function dataParsed(results) {
 		roomData.push(lastCsvData[i]);	
 	}
 	//console.log(roomData);
+	roomData=fillEmpty(roomData);
 	displayText(roomData, d);
 	
+}
+
+function fillEmpty(data) {
+	//data[0].rs_begin,data[0].rs_end, data[0].rs_event, data[0].rs_group, data[0].rs_info;
+	
+	for(i=0; i<data.length; i++) {
+		if(data[i].rs_begin==null)
+			data[i].rs_begin="00:00";
+		if(data[i].rs_end==null)
+			data[i].rs_end="23:59";
+		if(data[i].rs_event==null)
+			data[i].rs_event="Unbelegt"
+		if(data[i].rs_group==null)
+			data[i].rs_group="Unbelegt"
+		if(data[i].rs_info==null)
+			data[i].rs_info="Raum in diesem Zeitraum nicht belegt"
+	}
+	return data;
 }
 
 function displayText(data, date) {
