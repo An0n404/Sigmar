@@ -84,6 +84,7 @@ $(document).ready(function() {
 	function updateTableEntry(citadelID, entryNum, time, title) {
 		console.log("ID: "+citadelID+" Entrynum: "+entryNum);
 		document.getElementById("R-" + citadelID +  "-"+entryNum+"-U").textContent = time;
+		console.log("R-" + citadelID +  "-"+entryNum);
 		document.getElementById("R-" + citadelID +  "-"+entryNum).innerHTML = "&#10132; "+title;;
 	}
 	
@@ -134,6 +135,8 @@ $(document).ready(function() {
 		updateTableEntry(citadelID, 2, roomData[1].rs_begin, roomData[1].rs_event);
 		if(roomData.length<=2)
 			return;
+		if(citadelID==14)
+			console.log(roomData);
 		updateTableEntry(citadelID, 3, roomData[2].rs_begin, roomData[2].rs_event);
 	}
 
@@ -204,15 +207,15 @@ $(document).ready(function() {
 				<td class="name_EG" colspan="2"><img class="raumbezeichnung" src="img/RaumSeoul.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG" id="R-3-1-U">00:00</th>
+				<th class="uhrzeit_EG" id="R-3-1-U"></th>
 				<th class="veranstaltung_EG" id="R-3-1">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_B" id="R-3-2-U">00:00</th>
+				<th class="uhrzeit_EG_B" id="R-3-2-U"></th>
 				<th class="veranstaltung_EG_B" id="R-3-2">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_C" id="R-3-3-U">00:00</th>
+				<th class="uhrzeit_EG_C" id="R-3-3-U"></th>
 				<th class="veranstaltung_EG_C" id="R-3-3">&#10132; </th>
 			</tr>
 			<td class="blanco" colspan="2"></td>
@@ -221,15 +224,15 @@ $(document).ready(function() {
 				<td class="name_EG" colspan="2"><img class="raumbezeichnung" src="img/RaumMontreal.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG" id="R-4-1-U">00:00</th>
+				<th class="uhrzeit_EG" id="R-4-1-U"></th>
 				<th class="veranstaltung_EG" id="R-4-1">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_B" id="R-4-2-U">00:00</th>
+				<th class="uhrzeit_EG_B" id="R-4-2-U"></th>
 				<th class="veranstaltung_EG_B" id="R-4-2">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_C" id="R-4-3-U">00:00</th>
+				<th class="uhrzeit_EG_C" id="R-4-3-U"></th>
 				<th class="veranstaltung_EG_C" id="R-4-3">&#10132; </th>
 			</tr>
         	        <td class="blanco" colspan="2"></td>
@@ -238,15 +241,15 @@ $(document).ready(function() {
 				<td class="name_EG" colspan="2"><img class="raumbezeichnung" src="img/RaumBarcelona.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG" id="R-6-1-U">00:00</th>
+				<th class="uhrzeit_EG" id="R-6-1-U"></th>
 				<th class="veranstaltung_EG" id="R-6-1">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_B" id="R-6-2-U">00:00</th>
+				<th class="uhrzeit_EG_B" id="R-6-2-U"></th>
 				<th class="veranstaltung_EG_B" id="R-6-2">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_C" id="R-6-3-U">00:00</th>
+				<th class="uhrzeit_EG_C" id="R-6-3-U"></th>
 				<th class="veranstaltung_EG_C" id="R-6-3">&#10132; </th>
 			</tr>
                 	<td class="blanco" colspan="2"></td>
@@ -269,15 +272,15 @@ $(document).ready(function() {
 				<td class="name_OG" colspan="2"><img class="raumbezeichnung" src="img/RaumTokio.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG" id="R-2-1-U">00:00</th>
+				<th class="uhrzeit_OG" id="R-2-1-U"></th>
 				<th class="veranstaltung_OG" id="R-2-1">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_B" id="R-2-2-U">00:00</th>
+				<th class="uhrzeit_OG_B" id="R-2-2-U"></th>
 				<th class="veranstaltung_OG_B" id="R-2-2">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_C" id="R-2-3-U">00:00</th>
+				<th class="uhrzeit_OG_C" id="R-2-3-U"></th>
 				<th class="veranstaltung_OG_C" id="R-2-3">&#10132; </th>
 			</tr>
 			<td class="blanco" colspan="2"></td>
@@ -286,16 +289,16 @@ $(document).ready(function() {
 				<td class="name_OG" colspan="2"><img class="raumbezeichnung" src="img/RaumRio.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG" id="R-14-1-U">00:00</th>
+				<th class="uhrzeit_OG" id="R-14-1-U"></th>
 				<th class="veranstaltung_OG" id="R-14-1">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_B" id="R-14-2-U">00:00</th>
+				<th class="uhrzeit_OG_B" id="R-14-2-U"></th>
 				<th class="veranstaltung_OG_B" id="R-14-2">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_C" id="R-14-3-U">00:00</th>
-				<th class="veranstaltung_OG_C" id="R-14-3-U">&#10132; </th>
+				<th class="uhrzeit_OG_C" id="R-14-3-U"></th>
+				<th class="veranstaltung_OG_C" id="R-14-3">&#10132; </th>
 			</tr>
               		<td class="blanco" colspan="2"></td>
 			<!-- Raum Athen, ID 11 -->
@@ -303,15 +306,15 @@ $(document).ready(function() {
 				<td class="name_OG" colspan="2"><img class="raumbezeichnung" src="img/RaumAthen.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG" id="R-11-1-U">00:00</th>
+				<th class="uhrzeit_OG" id="R-11-1-U"></th>
 				<th class="veranstaltung_OG" id="R-11-1">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_B" id="R-11-2-U">00:00</th>
+				<th class="uhrzeit_OG_B" id="R-11-2-U"></th>
 				<th class="veranstaltung_OG_B" id="R-11-2">&#10132; </th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_C" id="R-11-3-U">00:00</th>
+				<th class="uhrzeit_OG_C" id="R-11-3-U"></th>
 				<th class="veranstaltung_OG_C" id="R-11-3">&#10132; </th>
 			</tr>
                		<td class="blanco" colspan="2"></td>
