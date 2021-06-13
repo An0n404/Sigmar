@@ -82,9 +82,9 @@ $(document).ready(function() {
 	}
 
 	function updateTableEntry(citadelID, entryNum, time, title) {
-		console.log("ID: "+citadelID+" Entrynum: "+entryNum);
+		//console.log("ID: "+citadelID+" Entrynum: "+entryNum);
 		document.getElementById("R-" + citadelID +  "-"+entryNum+"-U").textContent = time;
-		console.log("R-" + citadelID +  "-"+entryNum);
+		//console.log("R-" + citadelID +  "-"+entryNum);
 		document.getElementById("R-" + citadelID +  "-"+entryNum).innerHTML = "&#10132; "+title;;
 	}
 	
@@ -102,9 +102,9 @@ $(document).ready(function() {
 				continue;
 			roomData.push(lastCsvData[i]);	
 		}
-		console.log(roomData);
+		//console.log(roomData);
 		roomData=fillEmpty(roomData);
-		console.log(roomData);
+		//console.log(roomData);
 		update(roomData);
 	}
 
@@ -126,7 +126,7 @@ $(document).ready(function() {
 	function displayRoom(citadelID, data) { //modifys table entry for a room ID with fitting data
 		//updateAnzeige01(data[0].rs_begin,data[0].rs_end, data[0].rs_event, data[0].rs_group, data[0].rs_info);
 		roomData = getRoomData(citadelID, data);
-		console.log("Raum: "+citadelID+" Eintraege: "+roomData.length)
+		console.log("Raum: "+citadelID+" Einträge: "+roomData.length)
 		if(roomData.length<=0)
 			return;
 		updateTableEntry(citadelID, 1, roomData[0].rs_begin, roomData[0].rs_event);
@@ -135,8 +135,6 @@ $(document).ready(function() {
 		updateTableEntry(citadelID, 2, roomData[1].rs_begin, roomData[1].rs_event);
 		if(roomData.length<=2)
 			return;
-		if(citadelID==14)
-			console.log(roomData);
 		updateTableEntry(citadelID, 3, roomData[2].rs_begin, roomData[2].rs_event);
 	}
 
