@@ -16,15 +16,16 @@ $(document).ready(function() {
 	var csvLocation = "/my_data.csv";
 	var lastCsvData;
 
+	Papa.parse(csvLocation, {download: true, header: true, dynamicTyping: true, skipEmptyLines: 'greedy',complete: function(results){dataParsed(results);}});
+
 	//start cycling over the parts of the display every x ms
 	scroller(10000); //10s for now
 
 	async function scroller(ms) {
 		while(true) {
-			//updateTableEntry("14","1","19:00","Suffclub umme ecke");
-			//updateTableEntry("11","2","22:17","Reiern auf'm Kneipenklo");
-			//updateTableEntry("11","3","01:23","Ab in die Heia");
-			Papa.parse(csvLocation, {download: true, header: true, dynamicTyping: true, skipEmptyLines: 'greedy',complete: function(results){dataParsed(results);}});
+			updateTableEntry("14","1","19:00","Suffclub umme ecke");
+			updateTableEntry("11","2","22:17","Reiern auf'm Kneipenklo");
+			updateTableEntry("11","3","01:23","Ab in die Heia");
 			await sleep(ms);
 			scrollPage();
 			await sleep(ms);
@@ -34,31 +35,6 @@ $(document).ready(function() {
 			console.log("updating now...")
 			
 		}
-	}
-
-	function fillEmpty(data) {
-		for(i=0; i<data.length; i++) {
-			if(data[i].rs_begin==null)
-				data[i].rs_begin="00:00";
-			if(data[i].rs_end==null)
-				data[i].rs_end="23:59";
-			if(data[i].rs_event==null)
-				data[i].rs_event="Unbelegt"
-			if(data[i].rs_group==null)
-				data[i].rs_group="Unbelegt"
-			if(data[i].rs_info==null)
-				data[i].rs_info="Raum in diesem Zeitraum nicht belegt"
-		}
-		return data;
-	}
-
-	function update(data) {
-		displayRoom(3,data);
-		displayRoom(4,data);
-		displayRoom(6,data);
-		displayRoom(2,data);
-		displayRoom(14,data);
-		displayRoom(11,data);
 	}
 
 	function sleep(ms) {
@@ -82,12 +58,11 @@ $(document).ready(function() {
 	}
 
 	function updateTableEntry(citadelID, entryNum, time, title) {
-		console.log("ID: "+citadelID+" Entrynum: "+entryNum);
 		document.getElementById("R-" + citadelID +  "-"+entryNum+"-U").textContent = time;
 		document.getElementById("R-" + citadelID +  "-"+entryNum).innerHTML = "&#10132; "+title;;
 	}
 	
-	function dataParsed(results) { //parses csv data and eliminates already finished entrys
+	function dataParsed(results) {
 		lastCsvData = results.data;
 		//console.log(lastCsvData);
 		var d = new Date();
@@ -102,39 +77,18 @@ $(document).ready(function() {
 			roomData.push(lastCsvData[i]);	
 		}
 		console.log(roomData);
-		roomData=fillEmpty(roomData);
-		console.log(roomData);
-		update(roomData);
+		displayText(roomData);
 	}
 
-	function getRoomData(citadelID, data) { //returns the three relevant entrys for the given room ID
-		var out =[];
-		for(i=0;i<data.length&&out.length<3;i++) {
-			//console.log("ping 1 @ "+i);
-			if(data[i].rs_roomnum==citadelID) {
-				out.push(data[i]);
-				//console.log("ping 2 @ "+i);
-			}
-			if(data[i].rs_roomnum==5&&(citadelID==3||citadelID==4)) {
-				out.push(data[i]);
-			}
-		}
-		return out;
-	}
 
-	function displayRoom(citadelID, data) { //modifys table entry for a room ID with fitting data
-		//updateAnzeige01(data[0].rs_begin,data[0].rs_end, data[0].rs_event, data[0].rs_group, data[0].rs_info);
-		roomData = getRoomData(citadelID, data);
-		console.log("Raum: "+citadelID+" Eintraege: "+roomData.length)
-		if(roomData.length<=0)
-			return;
-		updateTableEntry(citadelID, 1, roomData[0].rs_begin, roomData[0].rs_event);
-		if(roomData.length<=1)
-			return;
-		updateTableEntry(citadelID, 2, roomData[1].rs_begin, roomData[1].rs_event);
-		if(roomData.length<=2)
-			return;
-		updateTableEntry(citadelID, 3, roomData[2].rs_begin, roomData[2].rs_event);
+
+	function displayText(data) {
+		if(data[0])
+			updateAnzeige01(data[0].rs_begin,data[0].rs_end, data[0].rs_event, data[0].rs_group, data[0].rs_info);
+		if(data[1])
+			updateAnzeige02(data[1].rs_begin,data[1].rs_end, data[1].rs_event, data[1].rs_group, data[1].rs_info);
+		if(data[2])
+			updateAnzeige03(data[2].rs_begin,data[2].rs_end, data[2].rs_event);
 	}
 
 
@@ -204,16 +158,16 @@ $(document).ready(function() {
 				<td class="name_EG" colspan="2"><img class="raumbezeichnung" src="img/RaumSeoul.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG" id="R-3-1-U">00:00</th>
-				<th class="veranstaltung_EG" id="R-3-1">&#10132; </th>
+				<th class="uhrzeit_EG">08:00</th>
+				<th class="veranstaltung_EG">&#10132; Planungssitzung "nichtolympische" Disziplinen</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_B" id="R-3-2-U">00:00</th>
-				<th class="veranstaltung_EG_B" id="R-3-2">&#10132; </th>
+				<th class="uhrzeit_EG_B">10:30</th>
+				<th class="veranstaltung_EG_B">&#10132; Folgeveranstaltung</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_C" id="R-3-3-U">00:00</th>
-				<th class="veranstaltung_EG_C" id="R-3-3">&#10132; </th>
+				<th class="uhrzeit_EG_C">12:00</th>
+				<th class="veranstaltung_EG_C">&#10132; Dies ist ein Blindtext</th>
 			</tr>
 			<td class="blanco" colspan="2"></td>
 			<!-- Raum Montreal, ID 4 (5) -->
@@ -221,16 +175,16 @@ $(document).ready(function() {
 				<td class="name_EG" colspan="2"><img class="raumbezeichnung" src="img/RaumMontreal.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG" id="R-4-1-U">00:00</th>
-				<th class="veranstaltung_EG" id="R-4-1">&#10132; </th>
+				<th class="uhrzeit_EG">08:00</th>
+				<th class="veranstaltung_EG">&#10132; Planungssitzung "nichtolympische" Disziplinen</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_B" id="R-4-2-U">00:00</th>
-				<th class="veranstaltung_EG_B" id="R-4-2">&#10132; </th>
+				<th class="uhrzeit_EG_B">10:30</th>
+				<th class="veranstaltung_EG_B">&#10132; Folgeveranstaltung</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_C" id="R-4-3-U">00:00</th>
-				<th class="veranstaltung_EG_C" id="R-4-3">&#10132; </th>
+				<th class="uhrzeit_EG_C">12:00</th>
+				<th class="veranstaltung_EG_C">&#10132; Dies ist ein Blindtext</th>
 			</tr>
         	        <td class="blanco" colspan="2"></td>
 			<!-- Raum Barcelona, ID 6 -->
@@ -238,16 +192,16 @@ $(document).ready(function() {
 				<td class="name_EG" colspan="2"><img class="raumbezeichnung" src="img/RaumBarcelona.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG" id="R-6-1-U">00:00</th>
-				<th class="veranstaltung_EG" id="R-6-1">&#10132; </th>
+				<th class="uhrzeit_EG">08:00</th>
+				<th class="veranstaltung_EG">&#10132; Planungssitzung "nichtolympische" Disziplinen</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_B" id="R-6-2-U">00:00</th>
-				<th class="veranstaltung_EG_B" id="R-6-2">&#10132; </th>
+				<th class="uhrzeit_EG_B">10:30</th>
+				<th class="veranstaltung_EG_B">&#10132; Folgeveranstaltung</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_EG_C" id="R-6-3-U">00:00</th>
-				<th class="veranstaltung_EG_C" id="R-6-3">&#10132; </th>
+				<th class="uhrzeit_EG_C">12:00</th>
+				<th class="veranstaltung_EG_C">&#10132; Planungssitzung "nichtolympische" Disziplinen</th>
 			</tr>
                 	<td class="blanco" colspan="2"></td>
 		</table>
@@ -269,16 +223,16 @@ $(document).ready(function() {
 				<td class="name_OG" colspan="2"><img class="raumbezeichnung" src="img/RaumTokio.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG" id="R-2-1-U">00:00</th>
-				<th class="veranstaltung_OG" id="R-2-1">&#10132; </th>
+				<th class="uhrzeit_OG" id="R-2-1-U">08:00</th>
+				<th class="veranstaltung_OG" id="R-2-1">&#10132; Planungssitzung "nichtolympische" Disziplinen</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_B" id="R-2-2-U">00:00</th>
-				<th class="veranstaltung_OG_B" id="R-2-2">&#10132; </th>
+				<th class="uhrzeit_OG_B" id="R-2-2-U">10:30</th>
+				<th class="veranstaltung_OG_B" id="R-2-2">&#10132; Folgeveranstaltung</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_C" id="R-2-3-U">00:00</th>
-				<th class="veranstaltung_OG_C" id="R-2-3">&#10132; </th>
+				<th class="uhrzeit_OG_C" id="R-2-3-U">12:00</th>
+				<th class="veranstaltung_OG_C" id="R-2-3">&#10132; Dies ist ein Blindtext</th>
 			</tr>
 			<td class="blanco" colspan="2"></td>
 			<!-- Raum Rio, ID 14 -->
@@ -286,16 +240,16 @@ $(document).ready(function() {
 				<td class="name_OG" colspan="2"><img class="raumbezeichnung" src="img/RaumRio.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG" id="R-14-1-U">00:00</th>
-				<th class="veranstaltung_OG" id="R-14-1">&#10132; </th>
+				<th class="uhrzeit_OG" id="R-14-1-U">08:00</th>
+				<th class="veranstaltung_OG" id="R-14-1">&#10132; Planungssitzung "nichtolympische" Disziplinen</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_B" id="R-14-2-U">00:00</th>
-				<th class="veranstaltung_OG_B" id="R-14-2">&#10132; </th>
+				<th class="uhrzeit_OG_B" id="R-14-2-U">10:30</th>
+				<th class="veranstaltung_OG_B" id="R-14-2">&#10132; Folgeveranstaltung</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_C" id="R-14-3-U">00:00</th>
-				<th class="veranstaltung_OG_C" id="R-14-3-U">&#10132; </th>
+				<th class="uhrzeit_OG_C" id="R-14-3-U">12:00</th>
+				<th class="veranstaltung_OG_C" id="R-14-3-U">&#10132; Dies ist ein Blindtext</th>
 			</tr>
               		<td class="blanco" colspan="2"></td>
 			<!-- Raum Athen, ID 11 -->
@@ -303,16 +257,16 @@ $(document).ready(function() {
 				<td class="name_OG" colspan="2"><img class="raumbezeichnung" src="img/RaumAthen.svg" alt="" /></td>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG" id="R-11-1-U">00:00</th>
-				<th class="veranstaltung_OG" id="R-11-1">&#10132; </th>
+				<th class="uhrzeit_OG" id="R-11-1-U">08:00</th>
+				<th class="veranstaltung_OG" id="R-11-1">&#10132; Planungssitzung "nichtolympische" Disziplinen</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_B" id="R-11-2-U">00:00</th>
-				<th class="veranstaltung_OG_B" id="R-11-2">&#10132; </th>
+				<th class="uhrzeit_OG_B" id="R-11-2-U">10:30</th>
+				<th class="veranstaltung_OG_B" id="R-11-2">&#10132; Folgeveranstaltung</th>
 			</tr>
 			<tr>
-				<th class="uhrzeit_OG_C" id="R-11-3-U">00:00</th>
-				<th class="veranstaltung_OG_C" id="R-11-3">&#10132; </th>
+				<th class="uhrzeit_OG_C" id="R-11-3-U">12:00</th>
+				<th class="veranstaltung_OG_C" id="R-11-3">&#10132; Planungssitzung "nichtolympische" Disziplinen</th>
 			</tr>
                		<td class="blanco" colspan="2"></td>
 		</table>
